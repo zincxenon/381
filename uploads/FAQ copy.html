@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+</head>
+<body>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><b>Project 1 Frequently Asked Questions</b></span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><b>Updated 9/17/2015</b></span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><b>The most recent items appear first.</b></span><span style="font: 12.0px Helvetica; font-kerning: none"><br>
+</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><br>
+</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><b>I'm xxxxxxxxxxxxxxxxxxxxxxx using Xcode and I get a "duplicate declaration" error on the line that declares struct Point in Ordered_container_demo2.c. What did I do wrong?</b></span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">You didn't do anything wrong; what Apple did with this newer version of Xcode is provide a new "module" facility for Objective-C, made it apply to C, and enabled it by default. It drags in the ancient declaration of a Mac OS GUI Point and that causes a collision with your declaration. To fix this, and avoid similar fiascos with our "plain vanilla" code, do the following:</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><br>
+</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">Go into Build Settings (the blue icon at the top of the file list.</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">Scan down for "Apple LLVM 6.1 - Language - Modules"</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">Set "Enable Modules (C and Objective C)" to "No".</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">Do a clean - select Product/Clean</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">Then rebuild with command-B or the Run button.<br>
+</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none">This was a nasty surprise. Let me know if you encounter similar set-up problems.</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><br>
+</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><i>Note: </i>While extremely annoying, this sort of problem happens occasionally with IDEs like Xcode and Visual Studio because they are tools built for full-scale application software development, and we are doing very plain old-fashion code in this course. So the first thing you have to do is figure out how to dumb the IDE down. Both Apple and Microsoft make mistakes of this sort from time to time. In return, you get easy project development, smart editors, and great debugging tools.</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><br>
+</span></p>
+<p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000"><span style="font-kerning: none"><br>
+</span></p>
+</body>
+</html>

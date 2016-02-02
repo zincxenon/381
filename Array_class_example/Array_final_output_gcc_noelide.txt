@@ -1,0 +1,76 @@
+// output obtained with gcc 4.7.0
+caen-vnc01% g++ -std=c++11 -fno-elide-constructors Array_final.cpp
+caen-vnc01% ./a.out
+Initialize a
+Array 1 constructed
+a has: 0 1 2 3 4 
+
+Copy construct
+Array 2 constructed from 1
+b has copy of a: 0 1 2 3 4 
+
+Default construct and assign from another Array
+Array 3 default constructed
+c has: 
+Array 4 constructed from 1
+Array 3 assigned from 1
+Array 4 destroyed
+c has copy of a: 0 1 2 3 4 
+
+Construct from rvalue expression
+Array 5 constructed
+Array 6 move constructed from 5
+Array 5 destroyed
+Array 7 move constructed from 6
+Array 6 destroyed
+d has copy of a + c: 0 2 4 6 8 
+
+Default construct and assign from rvalue expression
+Array 8 default constructed
+e has: 
+Array 9 constructed
+Array 10 move constructed from 9
+Array 9 destroyed
+Array 8 move assigned from 10
+Array 10 destroyed
+e has sum of a + c: 0 2 4 6 8 
+
+Construct from function return value
+Array 11 constructed from 1
+Array 12 constructed
+Array 13 move constructed from 12
+Array 12 destroyed
+Array 14 move constructed from 13
+Array 13 destroyed
+Array 11 destroyed
+f has returned reverse of a: 4 3 2 1 0 
+
+Call by value and assign from returned value:
+e has: 0 2 4 6 8 
+Array 15 constructed from 8
+Array 16 constructed
+Array 17 move constructed from 16
+Array 16 destroyed
+Array 2 move assigned from 17
+Array 17 destroyed
+Array 15 destroyed
+b has reversed copy of e: 8 6 4 2 0 
+
+Assign from function which returns its parameter variable
+Array 18 constructed from 1
+Array 19 move constructed from 18
+Array 14 move assigned from 19
+Array 19 destroyed
+Array 18 destroyed
+f has returned increment of a: 0 2 4 6 8 
+
+Done with demo
+Array 14 destroyed
+Array 8 destroyed
+Array 7 destroyed
+Array 3 destroyed
+Array 2 destroyed
+
+Returning from main
+Array 1 destroyed
+caen-vnc01% 
