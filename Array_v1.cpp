@@ -1,12 +1,22 @@
 // This class holds an integer array of any size, and detects illegal subscripts.
-// This version forbids copy and assignment, and so is safe,
-// but you can't use it like a built-in variable.
+// subscript errors throw an exception instead of just halting
+
 
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
-// version 2 - safe for actual use, but limited
+// An exception object with a message and data value
+class Array_Exception {
+public:
+    Array_Exception (int v, const char * msg) :
+    value (v), msg_ptr(msg) {}
+    
+    int value;
+    const char * msg_ptr;
+};
+
+
+// version 3 with exceptions - suitable for actual use, and good error handling
 class Array {
 public:
     // constructor - argument is desired size of the array
@@ -14,143 +24,172 @@ public:
     Array(int size_) : size(size_) {
         ptr = new int[size];
         cout << "Array of size " << size << " constructed." << endl;  // demo only
-    }
+        }
+
+    // copy constructor - initialize this object from another one
+    Array(const Array& original) : size(original.size) {
+        ptr = new int[size];            // allocate new space of that size
+        for (int i = 0; i < size; i++)  // copy the data over
+            ptr[i] = original.ptr[i];
+        cout << "Array of size " << size << " constructed from another one" << endl;  // demo only
+        }
+    
+/*  // Traditional assignment operator overload - copy the data from rhs into lhs object
+    // return a reference to this object to allow normal cascaded assignments
+    Array& operator= (const Array& rhs) {
+        // check that different objects are involved - do nothing if the same
+        if (this != &rhs) {
+            // deallocate this object's data - going to be replaced
+            delete[] ptr;
+            // allocate a new data array and copy rhs's data into it.
+            // note: duplicated code can be placed in a private helper function
+            size = rhs.size;                // copy the size over
+            ptr = new int[size];            // allocate new space of that size
+            for (int i = 0; i < size; i++)  // copy the data over
+                ptr[i] = rhs.ptr[i];
+            }
+        cout << "Array of size " << size << " assigned from another one" << endl;  // demo only
+        // return reference to this object as value of the assignment expression
+        return *this;
+        }
+*/
+        
+    // copy-swap idiom assignment operator overload - copy the data from rhs into lhs object
+    // return a reference to this object to allow cascaded assignments
+    Array& operator= (const Array& rhs) {
+        // create a temp copy of rhs (right-hand side)
+        Array temp(rhs);
+        // swap the guts of this object with the temp;
+        swap(temp);
+        // return reference to this object as value of the assignment expression
+        cout << "Array of size " << size << " assigned from another one" << endl;
+        return *this;
+        // destructor deallocates memory of temp that used to belong to this object
+        }   
+
+    // swap the member variable values of this object with the other
+    // could use std::swap function template here
+    void swap(Array& other) {
+        int t_size = size;
+        size = other.size;
+        other.size = t_size;
+        int * t_ptr = ptr;
+        ptr = other.ptr;
+        other.ptr = t_ptr;
+        }       
+    
     
     // destructor is responsible for freeing memory when array object is deallocated
     ~Array() {
         delete[] ptr;
         cout << "Array of size " << size << " destroyed." << endl;  // demo only
-    }
+        }   
     
     // public access function for private data
     int get_size() const {return size;}
-    
+
     // overload the subscripting operator for this class - const version
+    // this will throw an error if the index is out of range (including size == 0 case)
     const int& operator[] (int index) const {
         if ( index < 0 || index > size - 1) {
-            // this is simple, but there are better actions possible
-            cerr << "Attempt to access Array with illegal index = " << index << endl;
-            cerr << "Terminating program" << endl;
-            exit(EXIT_FAILURE);
+            // throw a bad-subscript exception
+            throw Array_Exception(index, "Index out of range");
         }
         return ptr[index];
     }
     
     // overload the subscripting operator for this class - nonconst version
+    // this will throw an error if the index is out of range (including size == 0 case)
     int& operator[] (int index) {
         if ( index < 0 || index > size - 1) {
-            // this is simple, but there are better actions possible
-            cerr << "Attempt to access Array with illegal index = " << index << endl;
-            cerr << "Terminating program" << endl;
-            exit(EXIT_FAILURE);
+            // throw a bad-subscript exception
+            throw Array_Exception(index, "Index out of range");
         }
         return ptr[index];
     }
-    // C++11 style for forbidding copy and assignment
-    Array(const Array& source) = delete;
-    Array& operator= (const Array& source) = delete;
     
+
 private:
-    // C++98 (or C++03) style for forbidding copy and assignment
-    //  Array(const Array& source); // forbid use of copy constructor
-    //  Array& operator= (const Array& source); // forbid use of assignment operator
     int size;
-    int* ptr;
+    int* ptr;   
 };
 
-void printem(const Array& a); // copy ctor not called, read-only
-double averagem(Array a); // copy ctor called
-void zeroem(Array& a);  // copy ctor not called
-Array squarem(const Array& a);
+void get_range (const Array& a);
+void print_range(const Array& a, int min, int max);
 
-// demonstrate use of Array Class, version 2
+// demonstrate use of Array Class, version 3 with exceptions
 int main()
-{
-    //  Array x;    // error - no default constructor
-    
+{   
+
     Array a(5);
     for (int i = 0; i < 5; i++)
         a[i] = i;   // 0, 1, 2, 3, 4
+
+    for (int count = 0; count < 3; count++) {
+        
+        // let's try getting and printing a range
+        try {
+            get_range(a);
+        }
+        
+        catch (Array_Exception& x) {
+            cout << x.msg_ptr << ' ' << x.value << endl;
+        }
+        
+        cout << "Shall we try again?" << endl;
+        
+    }
     
-    // demonstrate call by const reference
-    cout << "\nContents of a in main:" << endl;
-    printem(a);
-    
-    /*  // demonstrate initialization from copy ctor
-     // error - call to deleted constructor (C++11) / illegal access to private member (C++ 98)
-     Array b(a);
-     cout << "Contents of b after Array b(a);" << endl;
-     printem(b);
-     */
-    /*  // demonstrate call by value
-     cout << "\nAbout to call averagem(a)" << endl;
-     // error - call to deleted constructor (C++11) / illegal access to private member (C++ 98)
-     double avg = averagem(a);
-     cout << "Average is " << avg << endl;
-     cout << "Contents of a after double avg = averagem(a);" << endl;
-     printem(a);
-     */
-    // demonstrate modification through call by reference
-    cout << "\nAbout to call zeroem(a);" << endl;
-    zeroem(a);
-    cout << "Contents of a after zeroem(a);" << endl;
-    printem(a);
-    
-    Array x(5);
-    /*  // demonstrate assignment
-     cout << "\nAbout to execute x = a;" << endl;
-     // error - call to deleted operator= (C++11) / illegal access to private member (C++ 98)
-     x = a;
-     cout << "Contents of a after a = b;" << endl;
-     printem(a);
-     */
-    /*  // demonstrate return value assignment
-     cout << "\nAbout to execute a = squarem(b);" << endl;
-     // error - call to deleted operator= (C++11) / illegal access to private member (C++ 98)
-     x = squarem(a);    // error - illegal access to private member
-     cout << "Contents of a after a = squarem(b);" << endl;
-     printem(a);
-     */
     cout << "\nDone!" << endl;
     
 }
 
 
-void printem(const Array& a) // copy ctor not called
+void get_range (const Array& a)
 {
-    for (int i = 0; i < a.get_size(); i++)
+    int min, max;
+    cout << "Enter min, max range:";
+    cin >> min >> max;
+    print_range(a, min, max);
+}
+
+
+void print_range(const Array& a, int min, int max)
+{
+    for (int i = min; i <= max; i++)
         cout << '[' << i << "]:" << a[i] << endl;;
 }
 
-double averagem(Array a) // copy ctor called in client code
-{
-    double sum = 0;
-    
-    for (int i = 0; i < a.get_size(); i++) {
-        sum += a[i];
-        a[i] = 0;   // demo only
-    }
-    cout << "Contents of a in averagem:" << endl;
-    printem(a);
-    return sum/a.get_size();
-}
-
-void zeroem(Array& a)
-{
-    for (int i = 0; i < a.get_size(); i++)
-        a[i] = 0;
-}
-
-
-/*
- // return a new smart array object
- Array squarem(const Array& a)
- {
- Array b(a.get_size());
+/* OUTPUT
+ Array of size 5 constructed.
+ Enter min, max range:2 4
+ [2]:2
+ [3]:3
+ [4]:4
+ Shall we try again?
+ Enter min, max range:2 8
+ [2]:2
+ [3]:3
+ [4]:4
+ [5]:Index out of range 5
+ Shall we try again?
+ Enter min, max range:-1 +1
+ [-1]:Index out of range -1
+ Shall we try again?
  
- for (int i = 0; i < a.get_size(); i++)
- b[i] = a[i] * a[i];
- // error - call to deleted constructor (C++11) / illegal access to private member (C++ 98)
- return b;  // error - illegal access to private member
- }
+ Done!
+ Array of size 5 destroyed.
+ */
+
+/* OUTPUT IF TRY-CATCH IS COMMENTED OUT
+ Array of size 5 constructed.
+ Enter min, max range:2 4
+ [2]:2
+ [3]:3
+ [4]:4
+ Shall we try again?
+ Enter min, max range:2 8
+ [2]:2
+ [3]:3
+ [4]:4
  */
