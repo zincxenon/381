@@ -1,22 +1,19 @@
 package com.mycompany.app.Graph.algorithms;
 
+/**
+ * Created by william on 3/2/16.
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by william on 3/1/16.
- */
-public class kNN {
-
-
+class kNNFloat {
     static class Sample {
         int label;
-        int [] pixels;
+        float [] pixels;
     }
-
 
     private static List<Sample> readFile(String file) throws IOException {
         List<Sample> samples = new ArrayList<Sample>();
@@ -27,9 +24,9 @@ public class kNN {
                 String[] tokens = line.split(",");
                 Sample sample = new Sample();
                 sample.label = Integer.parseInt(tokens[0]);
-                sample.pixels = new int[tokens.length - 1];
+                sample.pixels = new float[tokens.length - 1];
                 for(int i = 1; i < tokens.length; i++) {
-                    sample.pixels[i-1] = Integer.parseInt(tokens[i]);
+                    sample.pixels[i-1] = Float.parseFloat(tokens[i]);
                 }
                 samples.add(sample);
             }
@@ -37,19 +34,19 @@ public class kNN {
         return samples;
     }
 
-
-    private static int distance(int[] a, int[] b) {
+    private static float distance(float[] a, float[] b) {
         int sum = 0;
         for(int i = 0; i < a.length; i++) {
             sum += (a[i] - b[i]) * (a[i] - b[i]);
         }
-        return (int)Math.sqrt(sum); // euclidian distance would be sqrt(sum)...
+        return (float)Math.sqrt(sum);
     }
 
-    private static int classify(List<Sample> trainingSet, int[] pixels) {
-        int label = 0, bestDistance = Integer.MAX_VALUE;
+    private static int classify(List<Sample> trainingSet, float[] pixels) {
+        int label = 0;
+        float bestDistance = Integer.MAX_VALUE;
         for(Sample sample: trainingSet) {
-            int dist = distance(sample.pixels, pixels);
+            float dist = distance(sample.pixels, pixels);
             if(dist < bestDistance) {
                 bestDistance = dist;
                 label = sample.label;
@@ -57,7 +54,6 @@ public class kNN {
         }
         return label;
     }
-
 
     public static void main(String[] argv) throws IOException {
         List<Sample> trainingSet = readFile("trainingsample.csv");
@@ -68,5 +64,4 @@ public class kNN {
         }
         System.out.println("Accuracy: " + (double)numCorrect / validationSet.size() * 100 + "%");
     }
-
 }

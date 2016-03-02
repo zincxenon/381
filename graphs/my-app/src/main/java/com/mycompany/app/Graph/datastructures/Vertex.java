@@ -6,6 +6,16 @@ import java.util.ArrayList;
  * Created by william on 3/1/16.
  */
 public class Vertex<T> {
+    boolean visited = false;
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
     T item;
     ArrayList<Vertex> neighbors;
 

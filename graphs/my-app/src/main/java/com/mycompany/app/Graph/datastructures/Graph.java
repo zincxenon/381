@@ -10,7 +10,11 @@ import java.util.*;
 
 public class Graph<T> extends AbstractGraph{
 
+    public Graph() {
+    }
+
     public boolean directed = true;
+    public boolean cycleExists = false;
 
     @Override
     public boolean equals(Object o) {
@@ -123,6 +127,7 @@ public class Graph<T> extends AbstractGraph{
                 vertexEdgeHashMap.put(v, new ArrayList<Edge<T>>());
             }
         }
+        this.isCycleExists();
     }
 
     @Override
@@ -141,6 +146,7 @@ public class Graph<T> extends AbstractGraph{
             }
             e.getEnd().getNeighbors().add(e.getStart());
         }
+        this.isCycleExists();
 
     }
 
@@ -158,4 +164,30 @@ public class Graph<T> extends AbstractGraph{
         }
     }
 
+    public boolean isCycleExists() {
+        for (Vertex v : vertices) {
+            dfs(this, v, new Stack());
+            if (this.cycleExists) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void setCycleExists(boolean cycleExists) {
+        this.cycleExists = cycleExists;
+    }
+
+    public void dfs(Graph g, Vertex start, Stack s) {
+        s.add(start);
+        for (Vertex neighbor : (ArrayList<Vertex>) start.getNeighbors()) {
+            if (neighbor.isVisited()) {
+                this.setCycleExists(true);
+            } else {
+                start.setVisited(true);
+                dfs(g, neighbor, s);
+            }
+        }
+        s.pop();
+    }
 }
