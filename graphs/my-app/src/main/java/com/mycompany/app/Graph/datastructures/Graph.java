@@ -8,7 +8,7 @@ package com.mycompany.app.Graph.datastructures;
 import java.util.*;
 
 
-public class Graph<T> extends AbstractGraph{
+public class Graph<T> extends AbstractGraph {
 
     public Graph() {
     }
@@ -60,19 +60,14 @@ public class Graph<T> extends AbstractGraph{
     List<Edge<T>> edges = new ArrayList<Edge<T>>();
 
     public Graph(List<Edge<T>> edges, List<Vertex<T>> vertices) {
-        this.vertexEdgeHashMap = new HashMap<Vertex<T>, List<Edge<T>>>();
-        this.edges = edges;
-        this.vertices = vertices;
+//        this.vertexEdgeHashMap = new HashMap<Vertex<T>, List<Edge<T>>>();
+//        this.edges = edges;
+//        this.vertices = vertices;
+        for (Vertex v : vertices) {
+            this.addVertex(v);
+        }
         for (Edge edge : edges) {
-            Vertex start = edge.getStart();
-            Vertex end = edge.getEnd();
-            if (! vertexEdgeHashMap.containsKey(start)) {
-                List<Edge<T>> startEdges = new ArrayList<Edge<T>>();
-                edges.add(edge);
-                vertexEdgeHashMap.put(start, startEdges);
-            } else {
-                vertexEdgeHashMap.get(start).add(edge);
-            }
+            this.addEdge(edge);
         }
 
     }
@@ -110,43 +105,50 @@ public class Graph<T> extends AbstractGraph{
     @Override
     public String toString() {
         return "Graph{" +
-                "edges=" + edges +
+                "directed=" + directed +
+                ", cycleExists=" + isCycleExists() +
                 ", vertices=" + vertices +
-                ", vertexEdgeHashMap=" + vertexEdgeHashMap +
                 '}';
     }
 
     @Override
     public void addVertex(Vertex v) {
         this.vertices.add(v);
-        if (! vertexEdgeHashMap.containsKey(v)) {
+        if (!vertexEdgeHashMap.containsKey(v)) {
             vertexEdgeHashMap.put(v, new ArrayList<Edge<T>>());
         }
-        if (! directed) {
-            if (! vertexEdgeHashMap.containsKey(v)) {
+        if (!directed) {
+            if (!vertexEdgeHashMap.containsKey(v)) {
                 vertexEdgeHashMap.put(v, new ArrayList<Edge<T>>());
             }
         }
-        this.isCycleExists();
+//        this.isCycleExists();
     }
 
     @Override
     public void addEdge(Edge e) {
-        this.addVertex(e.getStart());
-        this.addVertex(e.getEnd());
-        e.getStart().getNeighbors().add(e.getEnd());
+        e.getStart().addNeighbor(e.getEnd());
+        if (! this.vertices.contains(e.getStart())) {
+            this.addVertex(e.getStart());
+        }
+        if (! this.vertices.contains(e.getEnd())) {
+            this.addVertex(e.getEnd());
+        }
+//        e.getStart().getNeighbors().add(e.getEnd());
 
         this.edges.add(e);
-        if (! vertexEdgeHashMap.containsKey(e.getStart())) {
+        if (!vertexEdgeHashMap.containsKey(e.getStart())) {
             vertexEdgeHashMap.put(e.getStart(), new ArrayList<Edge<T>>());
         }
-        if (! directed) {
-            if (! vertexEdgeHashMap.containsKey(e.getEnd())) {
+        if (!directed) {
+            if (!vertexEdgeHashMap.containsKey(e.getEnd())) {
                 vertexEdgeHashMap.put(e.getEnd(), new ArrayList<Edge<T>>());
             }
-            e.getEnd().getNeighbors().add(e.getStart());
+//            e.getEnd().getNeighbors().add(e.getStart());
+            e.getEnd().addNeighbor(e.getStart());
         }
-        this.isCycleExists();
+//        this.isCycleExists();
+        setCycleExists();
 
     }
 
@@ -165,29 +167,33 @@ public class Graph<T> extends AbstractGraph{
     }
 
     public boolean isCycleExists() {
-        for (Vertex v : vertices) {
-            dfs(this, v, new Stack());
-            if (this.cycleExists) {
-                return true;
-            }
-        }
-        return false;
+        return this.cycleExists;
+
     }
 
-    public void setCycleExists(boolean cycleExists) {
-        this.cycleExists = cycleExists;
+    public void setCycleExists() {
+        this.cycleExists = false;
+        for (Vertex v : vertices) {
+            Stack emptyStack = new Stack();
+            dfs(this, v, emptyStack);
+            if (this.cycleExists) {
+                return;
+            }
+        }
     }
 
     public void dfs(Graph g, Vertex start, Stack s) {
         s.add(start);
         for (Vertex neighbor : (ArrayList<Vertex>) start.getNeighbors()) {
             if (neighbor.isVisited()) {
-                this.setCycleExists(true);
+                this.cycleExists = true;
             } else {
                 start.setVisited(true);
                 dfs(g, neighbor, s);
             }
         }
-        s.pop();
+        if (!s.isEmpty()) {
+            s.pop();
+        }
     }
 }

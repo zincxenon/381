@@ -14,7 +14,12 @@ import com.mycompany.app.Graph.datastructures.Vertex;
  */
 public class BFS {
 
-    public void bfs(Graph g, Vertex start) {
+    Queue<Vertex> visitOrder = new PriorityQueue<Vertex>();
+
+    public BFS() {
+    }
+
+    public static void bfsPrint(Graph g, Vertex start) {
         Queue<Vertex> q = new PriorityQueue<Vertex>();
         q.add(start);
         while (!q.isEmpty()) {
@@ -26,6 +31,29 @@ public class BFS {
             }
         }
 
+    }
+
+    public void bfsOrdered(Graph g, Vertex start) {
+        this.visitOrder = new PriorityQueue<Vertex>();
+        Queue<Vertex> q = new PriorityQueue<Vertex>();
+        q.add(start);
+        while (!q.isEmpty()) {
+            Vertex v = q.remove();
+//            System.out.println("visited vertex " + v);
+            this.visitOrder.add(v);
+            ArrayList<Vertex> neighbors = v.getNeighbors();
+            for (Vertex neigh : neighbors) {
+                q.add(neigh);
+            }
+        }
+    }
+
+    public Queue<Vertex> getVisitOrder() {
+        return visitOrder;
+    }
+
+    public void setVisitOrder(Queue<Vertex> visitOrder) {
+        this.visitOrder = visitOrder;
     }
 
     public static void main(String[] args) {
@@ -77,6 +105,37 @@ public class BFS {
 
         final Graph<Integer> graph = new Graph<Integer>(edges, vertices);
         System.out.println(graph);
+
+        BFS.bfsPrint(graph, v1);
+
+        BFS b = new BFS();
+
+        System.out.println("==============================================");
+        System.out.println("starting at v1");
+        System.out.println("==============================================");
+        b.bfsOrdered(graph, v1);
+
+
+        System.out.println("==============================================");
+        System.out.println("starting at v2");
+        System.out.println("==============================================");
+        b.bfsOrdered(graph, v2);
+
+        System.out.println("==============================================");
+        System.out.println("starting at v3");
+        System.out.println("==============================================");
+        b.bfsOrdered(graph, v3);
+
+        System.out.println("==============================================");
+        System.out.println("starting at v4");
+        System.out.println("==============================================");
+        b.bfsOrdered(graph, v4);
+
+        System.out.println("==============================================");
+        System.out.println("starting at v5");
+        System.out.println("==============================================");
+        b.bfsOrdered(graph, v5);
+
 
     }
 }

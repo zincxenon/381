@@ -1,5 +1,6 @@
-com/mycompany/app/Algorithms/kNNTest.class
-com/mycompany/app/Algorithms/BFSTest.class
-com/mycompany/app/Algorithms/DFSTest.class
+com/mycompany/app/Graph/algorithms/kNNTest.class
+com/mycompany/app/Graph/algorithms/FloydWarshallTest.class
+com/mycompany/app/Graph/algorithms/BFSTest.class
+com/mycompany/app/Graph/algorithms/DFSTest.class
+com/mycompany/app/Graph/datastructures/GraphTest.class
 com/mycompany/app/AppTest.class
-com/mycompany/app/Graph/GraphTest.class

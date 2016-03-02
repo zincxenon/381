@@ -180,23 +180,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Kruskals.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Kruskals.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Kruskals.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29862174">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinimumSpanningTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/MinimumSpanningTree.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="7" selection-start-line="12" selection-start-column="2" selection-end-line="24" selection-end-column="7" />
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,13 +196,126 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <element signature="e#1710#1721#0" expanded="true" />
-                <element signature="e#1794#1820#0" expanded="true" />
-                <element signature="e#1863#1872#0" expanded="true" />
-                <element signature="e#5263#5264#0" expanded="true" />
-                <element signature="e#5309#5310#0" expanded="true" />
+                <element signature="e#1711#1722#0" expanded="true" />
+                <element signature="e#1795#1821#0" expanded="true" />
+                <element signature="e#1864#1873#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/datastructures/GraphTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#260#269#0" expanded="true" />
+                <element signature="e#316#325#0" expanded="true" />
+                <element signature="e#372#381#0" expanded="true" />
+                <element signature="e#428#437#0" expanded="true" />
+                <element signature="e#484#493#0" expanded="true" />
+                <element signature="e#540#549#0" expanded="true" />
+                <element signature="e#596#605#0" expanded="true" />
+                <element signature="e#1236#1245#0" expanded="true" />
+                <element signature="e#1297#1306#0" expanded="true" />
+                <element signature="e#1358#1367#0" expanded="true" />
+                <element signature="e#1419#1428#0" expanded="true" />
+                <element signature="e#1480#1489#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BFS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/BFS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#422#430#0" expanded="true" />
+                <element signature="e#561#569#0" expanded="true" />
+                <element signature="e#1033#1041#0" expanded="true" />
+                <element signature="e#1433#1434#0" expanded="true" />
+                <element signature="e#1466#1467#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+                <element signature="e#1677#1694#0" expanded="true" />
+                <element signature="e#1743#1752#0" expanded="true" />
+                <element signature="e#1802#1811#0" expanded="true" />
+                <element signature="e#1861#1870#0" expanded="true" />
+                <element signature="e#1920#1929#0" expanded="true" />
+                <element signature="e#1979#1988#0" expanded="true" />
+                <element signature="e#2038#2047#0" expanded="true" />
+                <element signature="e#2097#2106#0" expanded="true" />
+                <element signature="e#2156#2165#0" expanded="true" />
+                <element signature="e#2486#2501#0" expanded="true" />
+                <element signature="e#2548#2557#0" expanded="true" />
+                <element signature="e#2613#2622#0" expanded="true" />
+                <element signature="e#2678#2687#0" expanded="true" />
+                <element signature="e#2744#2753#0" expanded="true" />
+                <element signature="e#2810#2819#0" expanded="true" />
+                <element signature="e#2876#2885#0" expanded="true" />
+                <element signature="e#2942#2951#0" expanded="true" />
+                <element signature="e#3007#3016#0" expanded="true" />
+                <element signature="e#3072#3081#0" expanded="true" />
+                <element signature="e#3137#3146#0" expanded="true" />
+                <element signature="e#3202#3211#0" expanded="true" />
+                <element signature="e#3610#3619#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kNNTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/algorithms/kNNTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vertex.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Vertex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55130166">
+              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DFSMat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/DFSMat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#526#535#0" expanded="true" />
+                <element signature="e#623#632#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dijkstras.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Dijkstras.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#522#530#0" expanded="true" />
+                <element signature="e#589#597#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -225,97 +326,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFSTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/algorithms/DFSTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BFS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/BFS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#462#470#0" expanded="true" />
-                <element signature="e#889#906#0" expanded="true" />
-                <element signature="e#955#964#0" expanded="true" />
-                <element signature="e#1014#1023#0" expanded="true" />
-                <element signature="e#1073#1082#0" expanded="true" />
-                <element signature="e#1132#1141#0" expanded="true" />
-                <element signature="e#1191#1200#0" expanded="true" />
-                <element signature="e#1250#1259#0" expanded="true" />
-                <element signature="e#1309#1318#0" expanded="true" />
-                <element signature="e#1368#1377#0" expanded="true" />
-                <element signature="e#1698#1713#0" expanded="true" />
-                <element signature="e#1760#1769#0" expanded="true" />
-                <element signature="e#1825#1834#0" expanded="true" />
-                <element signature="e#1890#1899#0" expanded="true" />
-                <element signature="e#1956#1965#0" expanded="true" />
-                <element signature="e#2022#2031#0" expanded="true" />
-                <element signature="e#2088#2097#0" expanded="true" />
-                <element signature="e#2154#2163#0" expanded="true" />
-                <element signature="e#2219#2228#0" expanded="true" />
-                <element signature="e#2284#2293#0" expanded="true" />
-                <element signature="e#2349#2358#0" expanded="true" />
-                <element signature="e#2414#2423#0" expanded="true" />
-                <element signature="e#2822#2831#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/datastructures/GraphTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/AbstractGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EdgeComparator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/EdgeComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/DFS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -361,16 +371,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Algorithms/BFS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Algorithms/EdmondsKarp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Yens.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/datastructures/GraphTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/algorithms/BFSTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/kNNFloat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/kNN.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Vertex.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/DFS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/EdgeComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/MinimumSpanningTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Kruskals.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Graph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/BFS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/DFSMat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Dijkstras.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Edge.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/datastructures/GraphTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Vertex.java" />
       </list>
     </option>
   </component>
@@ -474,6 +488,122 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycompany" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycompany" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycompany" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1151,16 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/algorithms/kNNTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1216,14 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Dijkstras.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.114854515">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app.ipr">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1236,19 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,14 +1370,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#440#448#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,55 +1399,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/datastructures/GraphTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/algorithms/DFSTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/BFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#462#470#0" expanded="true" />
-            <element signature="e#889#906#0" expanded="true" />
-            <element signature="e#955#964#0" expanded="true" />
-            <element signature="e#1014#1023#0" expanded="true" />
-            <element signature="e#1073#1082#0" expanded="true" />
-            <element signature="e#1132#1141#0" expanded="true" />
-            <element signature="e#1191#1200#0" expanded="true" />
-            <element signature="e#1250#1259#0" expanded="true" />
-            <element signature="e#1309#1318#0" expanded="true" />
-            <element signature="e#1368#1377#0" expanded="true" />
-            <element signature="e#1698#1713#0" expanded="true" />
-            <element signature="e#1760#1769#0" expanded="true" />
-            <element signature="e#1825#1834#0" expanded="true" />
-            <element signature="e#1890#1899#0" expanded="true" />
-            <element signature="e#1956#1965#0" expanded="true" />
-            <element signature="e#2022#2031#0" expanded="true" />
-            <element signature="e#2088#2097#0" expanded="true" />
-            <element signature="e#2154#2163#0" expanded="true" />
-            <element signature="e#2219#2228#0" expanded="true" />
-            <element signature="e#2284#2293#0" expanded="true" />
-            <element signature="e#2349#2358#0" expanded="true" />
-            <element signature="e#2414#2423#0" expanded="true" />
-            <element signature="e#2822#2831#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1381,27 +1429,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="e#1710#1721#0" expanded="true" />
-            <element signature="e#1794#1820#0" expanded="true" />
-            <element signature="e#1863#1872#0" expanded="true" />
-            <element signature="e#5263#5264#0" expanded="true" />
-            <element signature="e#5309#5310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Kruskals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29862174">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/DFSMat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#526#535#0" expanded="true" />
+            <element signature="e#623#632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/Dijkstras.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#522#530#0" expanded="true" />
+            <element signature="e#589#597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5436447">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#1711#1722#0" expanded="true" />
+            <element signature="e#1795#1821#0" expanded="true" />
+            <element signature="e#1864#1873#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/datastructures/GraphTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#260#269#0" expanded="true" />
+            <element signature="e#316#325#0" expanded="true" />
+            <element signature="e#372#381#0" expanded="true" />
+            <element signature="e#428#437#0" expanded="true" />
+            <element signature="e#484#493#0" expanded="true" />
+            <element signature="e#540#549#0" expanded="true" />
+            <element signature="e#596#605#0" expanded="true" />
+            <element signature="e#1236#1245#0" expanded="true" />
+            <element signature="e#1297#1306#0" expanded="true" />
+            <element signature="e#1358#1367#0" expanded="true" />
+            <element signature="e#1419#1428#0" expanded="true" />
+            <element signature="e#1480#1489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/algorithms/BFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#422#430#0" expanded="true" />
+            <element signature="e#561#569#0" expanded="true" />
+            <element signature="e#1033#1041#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1677#1694#0" expanded="true" />
+            <element signature="e#1743#1752#0" expanded="true" />
+            <element signature="e#1802#1811#0" expanded="true" />
+            <element signature="e#1861#1870#0" expanded="true" />
+            <element signature="e#1920#1929#0" expanded="true" />
+            <element signature="e#1979#1988#0" expanded="true" />
+            <element signature="e#2038#2047#0" expanded="true" />
+            <element signature="e#2097#2106#0" expanded="true" />
+            <element signature="e#2156#2165#0" expanded="true" />
+            <element signature="e#2486#2501#0" expanded="true" />
+            <element signature="e#2548#2557#0" expanded="true" />
+            <element signature="e#2613#2622#0" expanded="true" />
+            <element signature="e#2678#2687#0" expanded="true" />
+            <element signature="e#2744#2753#0" expanded="true" />
+            <element signature="e#2810#2819#0" expanded="true" />
+            <element signature="e#2876#2885#0" expanded="true" />
+            <element signature="e#2942#2951#0" expanded="true" />
+            <element signature="e#3007#3016#0" expanded="true" />
+            <element signature="e#3072#3081#0" expanded="true" />
+            <element signature="e#3137#3146#0" expanded="true" />
+            <element signature="e#3202#3211#0" expanded="true" />
+            <element signature="e#3610#3619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/Graph/algorithms/kNNTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/app/Graph/datastructures/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55130166">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

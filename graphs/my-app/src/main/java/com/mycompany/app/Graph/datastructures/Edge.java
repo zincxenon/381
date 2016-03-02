@@ -36,6 +36,7 @@ public class Edge<T> {
 
         Edge<?> edge = (Edge<?>) o;
 
+        if (Double.compare(edge.length, length) != 0) return false;
         if (start != null ? !start.equals(edge.start) : edge.start != null) return false;
         return !(end != null ? !end.equals(edge.end) : edge.end != null);
 
@@ -64,8 +65,8 @@ public class Edge<T> {
     @Override
     public String toString() {
         return "Edge{" +
-                "end=" + end +
-                ", start=" + start +
+                "end=" + end.getItem() +
+                ", start=" + start.getItem() +
                 '}';
     }
 
