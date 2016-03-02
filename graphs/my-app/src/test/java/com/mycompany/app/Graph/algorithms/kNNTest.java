@@ -1,4 +1,4 @@
-package com.mycompany.app.Graph;
+package com.mycompany.app.Graph.algorithms;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by william on 3/1/16.
  */
-public class GraphTest {
+public class kNNTest {
 
     @Before
     public void setUp() throws Exception {
@@ -21,25 +21,19 @@ public class GraphTest {
     }
 
 
+
     @Test
-    public void testEdges() throws Exception {
+    public void testMedium() throws Exception {
 
     }
 
+
+
     @Test
-    public void testAddVertices() throws Exception {
+    public void testComplicated() throws Exception {
 
     }
 
-    @Test
-    public void testAddEdges() throws Exception {
-
-    }
-
-    @Test
-    public void testVertexEdgeHashMap() throws Exception {
-
-    }
 
 
     @After

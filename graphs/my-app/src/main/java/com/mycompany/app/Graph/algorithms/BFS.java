@@ -1,10 +1,14 @@
-package com.mycompany.app.Algorithms;
+package com.mycompany.app.Graph.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import com.mycompany.app.Graph.*;
+
+import com.mycompany.app.Graph.datastructures.Edge;
+import com.mycompany.app.Graph.datastructures.Graph;
+import com.mycompany.app.Graph.datastructures.Vertex;
+
 /**
  * Created by william on 3/1/16.
  */
@@ -72,6 +76,7 @@ public class BFS {
         }
 
         final Graph<Integer> graph = new Graph<Integer>(edges, vertices);
+        System.out.println(graph);
 
     }
 }

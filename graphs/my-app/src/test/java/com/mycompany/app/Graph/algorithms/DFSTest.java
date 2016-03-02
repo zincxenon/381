@@ -1,4 +1,4 @@
-package com.mycompany.app.Algorithms;
+package com.mycompany.app.Graph.algorithms;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by william on 3/1/16.
  */
-public class BFSTest {
+public class DFSTest {
 
 
     @Before

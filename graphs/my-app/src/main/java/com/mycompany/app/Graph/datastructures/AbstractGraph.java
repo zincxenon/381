@@ -1,4 +1,4 @@
-package com.mycompany.app.Graph;
+package com.mycompany.app.Graph.datastructures;
 
 /**
  * Created by william on 3/1/16.

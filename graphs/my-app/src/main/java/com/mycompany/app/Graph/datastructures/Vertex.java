@@ -1,4 +1,4 @@
-package com.mycompany.app.Graph;
+package com.mycompany.app.Graph.datastructures;
 
 import java.util.ArrayList;
 

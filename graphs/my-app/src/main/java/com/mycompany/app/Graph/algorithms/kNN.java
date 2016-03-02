@@ -1,4 +1,4 @@
-package com.mycompany.app.Algorithms;
+package com.mycompany.app.Graph.algorithms;
 
 /**
  * Created by william on 3/1/16.

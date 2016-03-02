@@ -1,6 +1,4 @@
-package com.mycompany.app.Graph;
-
-import java.util.Comparator;
+package com.mycompany.app.Graph.datastructures;
 
 /**
  * Created by william on 3/1/16.

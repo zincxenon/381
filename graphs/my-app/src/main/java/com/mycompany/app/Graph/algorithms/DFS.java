@@ -1,7 +1,7 @@
-package com.mycompany.app.Algorithms;
+package com.mycompany.app.Graph.algorithms;
 
-import com.mycompany.app.Graph.Graph;
-import com.mycompany.app.Graph.Vertex;
+import com.mycompany.app.Graph.datastructures.Graph;
+import com.mycompany.app.Graph.datastructures.Vertex;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
