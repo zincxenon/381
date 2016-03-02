@@ -6,8 +6,11 @@ package com.mycompany.app.Graph.datastructures;
 public abstract class AbstractGraph {
 
     public abstract void addVertex(Vertex v);
-    public abstract void addEdge(Edge e);
-    public abstract void print();
 
+    public abstract void removeVertex(Vertex v);
+
+    public abstract void addEdge(Edge e);
+
+    public abstract void removeEdge(Edge e);
 
 }

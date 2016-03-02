@@ -5,7 +5,6 @@ package com.mycompany.app.Graph.datastructures;
  */
 public class CoordinateVertex extends Vertex<Coordinate> {
 
-
     public CoordinateVertex(Coordinate item) {
         super(item);
     }

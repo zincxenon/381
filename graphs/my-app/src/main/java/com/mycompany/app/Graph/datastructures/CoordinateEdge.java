@@ -7,23 +7,8 @@ public class CoordinateEdge extends Edge<Coordinate>  implements Comparable<Edge
 
     double length;
 
-    @Override
-    public double getLength() {
-        return length;
-    }
-
-    @Override
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public CoordinateEdge(Vertex<Coordinate> end, int length, Vertex<Coordinate> start) {
-        super(length, end, start);
-        this.length = length();
-    }
-
-    public CoordinateEdge(Vertex<Coordinate> start, Vertex<Coordinate> end) {
-        super(start, end);
+    public CoordinateEdge(Vertex<Coordinate> start, Vertex<Coordinate> end, double length) {
+        super(start, end, length);
     }
 
     public double length() {

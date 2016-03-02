@@ -4,29 +4,39 @@ package com.mycompany.app.Graph.datastructures;
  * Created by william on 3/1/16.
  */
 public class Edge<T> {
-    Vertex<T> start, end;
 
-    public Edge(double length, Vertex<T> end, Vertex<T> start) {
+    Vertex<T> start;
+    Vertex<T> end;
+    double length;
+
+    public Edge(Vertex<T> start, Vertex<T> end, double length) {
+        this.start = start;
         this.end = end;
         this.length = length;
-        this.start = start;
     }
 
-    public void setLength(double length) {
-
-        this.length = length;
+    public Vertex<T> getEnd() {
+        return end;
     }
 
-    double length;
+    public void setEnd(Vertex<T> end) {
+        this.end = end;
+    }
 
     public double getLength() {
         return length;
     }
 
-    public Edge(Vertex<T> start, Vertex<T> end) {
-        this.start = start;
-        this.end = end;
+    public void setLength(double length) {
+        this.length = length;
+    }
 
+    public Vertex<T> getStart() {
+        return start;
+    }
+
+    public void setStart(Vertex<T> start) {
+        this.start = start;
     }
 
     @Override
@@ -44,33 +54,12 @@ public class Edge<T> {
 
     @Override
     public int hashCode() {
-        int result = start != null ? start.hashCode() : 0;
+        int result;
+        long temp;
+        result = start != null ? start.hashCode() : 0;
         result = 31 * result + (end != null ? end.hashCode() : 0);
+        temp = Double.doubleToLongBits(length);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
-    }
-
-    public Vertex<T> getEnd() {
-
-        return end;
-    }
-
-    public void setEnd(Vertex<T> end) {
-        this.end = end;
-    }
-
-    public Vertex<T> getStart() {
-        return start;
-    }
-
-    @Override
-    public String toString() {
-        return "Edge{" +
-                "end=" + end.getItem() +
-                ", start=" + start.getItem() +
-                '}';
-    }
-
-    public void setStart(Vertex<T> start) {
-        this.start = start;
     }
 }
